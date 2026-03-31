@@ -1,15 +1,16 @@
-# @pipeworx/mcp-exchange
+# mcp-exchange
 
-MCP server for currency exchange rates — conversion, historical rates, and currency lists.
+Exchange MCP — wraps the Frankfurter currency exchange API (free, no auth)
+
+Part of the [Pipeworx](https://pipeworx.io) open MCP gateway.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `get_rate` | Get the current exchange rate between two currencies |
-| `convert` | Convert an amount from one currency to another |
-| `get_historical_rate` | Get the exchange rate on a specific past date |
-| `get_currencies` | List all supported currencies |
+| `get_rate` | Get the current exchange rate between two currencies (e.g., USD to EUR). |
+| `convert` | Convert an amount from one currency to another at the current exchange rate. |
+| `get_currencies` | List all currencies supported by the Frankfurter API with their full names. |
 
 ## Quick Start
 
@@ -25,7 +26,7 @@ Add to your MCP client config:
 }
 ```
 
-Or run via CLI:
+Or use the CLI:
 
 ```bash
 npx pipeworx use exchange

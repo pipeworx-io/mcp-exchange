@@ -1,13 +1,3 @@
-/**
- * Exchange MCP — wraps the Frankfurter currency exchange API (free, no auth)
- *
- * Tools:
- * - get_rate: current exchange rate between two currencies
- * - convert: convert an amount between currencies
- * - get_historical_rate: exchange rate on a specific past date
- * - get_currencies: list all available currencies
- */
-
 interface McpToolDefinition {
   name: string;
   description: string;
@@ -22,6 +12,17 @@ interface McpToolExport {
   tools: McpToolDefinition[];
   callTool: (name: string, args: Record<string, unknown>) => Promise<unknown>;
 }
+
+/**
+ * Exchange MCP — wraps the Frankfurter currency exchange API (free, no auth)
+ *
+ * Tools:
+ * - get_rate: current exchange rate between two currencies
+ * - convert: convert an amount between currencies
+ * - get_historical_rate: exchange rate on a specific past date
+ * - get_currencies: list all available currencies
+ */
+
 
 const BASE_URL = 'https://api.frankfurter.app';
 
