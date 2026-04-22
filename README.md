@@ -2,19 +2,19 @@
 
 Exchange MCP — wraps the Frankfurter currency exchange API (free, no auth)
 
-Part of the [Pipeworx](https://pipeworx.io) open MCP gateway.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 250+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `get_rate` | Get the current exchange rate between two currencies (e.g., USD to EUR). |
-| `convert` | Convert an amount from one currency to another at the current exchange rate. |
-| `get_currencies` | List all currencies supported by the Frankfurter API with their full names. |
+| `get_rate` | Get the current exchange rate between two currencies (e.g., USD, EUR). Returns the rate value and timestamp. |
+| `convert` | Convert an amount from one currency to another at current rates. Returns the converted amount and the exchange rate applied. |
+| `get_currencies` | List all supported currencies with codes and full names. Use to verify currency codes before converting or checking rates. |
 
 ## Quick Start
 
-Add to your MCP client config:
+Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 
 ```json
 {
@@ -26,11 +26,32 @@ Add to your MCP client config:
 }
 ```
 
-Or use the CLI:
+Or connect to the full Pipeworx gateway for access to all 250+ data sources:
 
-```bash
-npx pipeworx use exchange
+```json
+{
+  "mcpServers": {
+    "pipeworx": {
+      "url": "https://gateway.pipeworx.io/mcp"
+    }
+  }
+}
 ```
+
+## Using with ask_pipeworx
+
+Instead of calling tools directly, you can ask questions in plain English:
+
+```
+ask_pipeworx({ question: "your question about Exchange data" })
+```
+
+The gateway picks the right tool and fills the arguments automatically.
+
+## More
+
+- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [pipeworx.io](https://pipeworx.io)
 
 ## License
 
