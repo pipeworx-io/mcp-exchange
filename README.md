@@ -2,7 +2,7 @@
 
 Exchange MCP — wraps the Frankfurter currency exchange API (free, no auth)
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 673+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
@@ -10,6 +10,7 @@ Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents 
 |------|-------------|
 | `get_rate` | Get the current exchange rate between two currencies (e.g., USD, EUR). Returns the rate value and timestamp. |
 | `convert` | Convert an amount from one currency to another at current rates. Returns the converted amount and the exchange rate applied. |
+| `get_historical_rate` | Get the exchange rate between two currencies on a specific date (format: YYYY-MM-DD). Returns the historical rate and date. |
 | `get_currencies` | List all supported currencies with codes and full names. Use to verify currency codes before converting or checking rates. |
 
 ## Quick Start
@@ -26,7 +27,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 673+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -50,7 +51,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
