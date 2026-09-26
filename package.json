@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-exchange",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Exchange MCP — wraps the Frankfurter currency exchange API (free, no auth)",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-d3ceb6c331bf1dd9d99f9e031a323c88b3da77ff69898f1348843f9eba1aebbf",
-    "sourceCommit": "76aa8f5d9b5dc2f665563030647c68e661478864"
+    "sourceHash": "v1-ad6fc60d0cede8363ee4533c75d748e50ca343951de9aa3efa1d57a3f243f655",
+    "sourceCommit": "91681e9a4a137fa0051d58e32f38c64b6334af5c"
   }
 }
