@@ -1,0 +1,83 @@
+[
+  {
+    "name": "get_rate",
+    "description": "Get the current exchange rate between two currencies (e.g., USD, EUR). Returns the rate value and timestamp.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "from": {
+          "type": "string",
+          "description": "Source currency code (e.g., USD, EUR, GBP)"
+        },
+        "to": {
+          "type": "string",
+          "description": "Target currency code (e.g., EUR, JPY, CHF)"
+        }
+      },
+      "required": [
+        "from",
+        "to"
+      ]
+    }
+  },
+  {
+    "name": "convert",
+    "description": "Convert an amount from one currency to another at current rates. Returns the converted amount and the exchange rate applied.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "from": {
+          "type": "string",
+          "description": "Source currency code (e.g., USD)"
+        },
+        "to": {
+          "type": "string",
+          "description": "Target currency code (e.g., JPY)"
+        },
+        "amount": {
+          "type": "number",
+          "description": "Amount to convert"
+        }
+      },
+      "required": [
+        "from",
+        "to",
+        "amount"
+      ]
+    }
+  },
+  {
+    "name": "get_historical_rate",
+    "description": "Get the exchange rate between two currencies on a specific date (format: YYYY-MM-DD). Returns the historical rate and date.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "from": {
+          "type": "string",
+          "description": "Source currency code (e.g., USD)"
+        },
+        "to": {
+          "type": "string",
+          "description": "Target currency code (e.g., EUR)"
+        },
+        "date": {
+          "type": "string",
+          "description": "Date in YYYY-MM-DD format (earliest available: 1999-01-04)"
+        }
+      },
+      "required": [
+        "from",
+        "to",
+        "date"
+      ]
+    }
+  },
+  {
+    "name": "get_currencies",
+    "description": "List all supported currencies with codes and full names. Use to verify currency codes before converting or checking rates.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  }
+]
